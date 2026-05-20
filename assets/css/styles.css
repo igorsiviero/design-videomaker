@@ -844,3 +844,202 @@ footer p {
   .page-shell { padding-top: 66px; }
   .nav__logo-img { height: 34px; }
 }
+
+
+/* ============================
+   MOBILE/TABLET NAVIGATION IMPROVEMENTS
+   ============================
+   Objetivo:
+   - Mostrar mais projetos por linha em telas menores;
+   - Reduzir altura visual dos cards no mobile;
+   - Manter vídeos e artes navegáveis sem rolagem excessiva;
+   - Preservar proporções originais das mídias dentro das miniaturas. */
+@media (max-width: 1120px) and (min-width: 761px) {
+  .portfolio-grid.is-design .portfolio-card {
+    grid-column: span 4;
+  }
+
+  .portfolio-grid.is-design .portfolio-card.banner-card {
+    grid-column: span 6;
+  }
+
+  .portfolio-grid.is-design .portfolio-card.logo-card {
+    grid-column: span 4;
+  }
+}
+
+@media (max-width: 760px) {
+  .portfolio-section {
+    padding: 28px 0 72px;
+  }
+
+  .section-top {
+    margin-bottom: 18px;
+  }
+
+  .portfolio-toolbar {
+    margin-bottom: 18px;
+  }
+
+  .filter-pills {
+    gap: 8px;
+  }
+
+  .filter-pill {
+    padding: 8px 11px;
+    font-size: 11px;
+  }
+
+  .portfolio-grid.is-design,
+  .portfolio-grid.is-video {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .portfolio-grid.is-design .portfolio-card,
+  .portfolio-grid.is-design .portfolio-card.banner-card,
+  .portfolio-grid.is-design .portfolio-card.horizontal-card,
+  .portfolio-grid.is-design .portfolio-card.logo-card,
+  .portfolio-grid.is-video .portfolio-card,
+  .portfolio-grid.is-video .portfolio-card.banner-card,
+  .portfolio-grid.is-video .portfolio-card.horizontal-card,
+  .portfolio-grid.is-video .portfolio-card.logo-card {
+    grid-column: auto;
+    border-radius: 16px;
+    box-shadow: 0 12px 34px rgba(0,0,0,0.20);
+  }
+
+  .portfolio-card:hover {
+    transform: none;
+  }
+
+  .portfolio-grid.is-design .media-frame,
+  .portfolio-grid.is-video .media-frame {
+    border-radius: 16px 16px 0 0;
+  }
+
+  .portfolio-grid.is-design .media-frame.banner {
+    aspect-ratio: 16 / 7;
+  }
+
+  .portfolio-grid.is-video .media-frame.horizontal {
+    aspect-ratio: 16 / 9;
+  }
+
+  .portfolio-grid.is-video .media-frame.vertical {
+    aspect-ratio: 3 / 4;
+  }
+
+  .portfolio-grid.is-video .media-frame video {
+    background: radial-gradient(circle at center, rgba(76,201,255,0.14), rgba(3,7,14,1) 68%);
+  }
+
+  .portfolio-grid.is-video .media-frame video.video-preview-ready {
+    background: #03070e;
+  }
+
+  .portfolio-grid.is-design .format-badge,
+  .portfolio-grid.is-video .format-badge {
+    top: 8px;
+    left: 8px;
+    max-width: calc(100% - 16px);
+    padding: 5px 7px;
+    font-size: 8.6px;
+    letter-spacing: -0.01em;
+  }
+
+  .portfolio-grid.is-design .card-body,
+  .portfolio-grid.is-video .card-body {
+    min-height: 0;
+    padding: 10px 10px 12px;
+  }
+
+  .portfolio-grid.is-video .card-body {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-grid.is-design .card-title,
+  .portfolio-grid.is-video .card-title {
+    min-height: 2.35em;
+    font-size: 12.5px;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .portfolio-grid.is-design .card-description,
+  .portfolio-grid.is-video .card-description {
+    min-height: 0;
+    margin-top: 6px;
+    font-size: 11px;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .portfolio-grid.is-design .tool-list,
+  .portfolio-grid.is-video .tool-list {
+    gap: 5px;
+    margin-top: 9px;
+    padding-top: 0;
+  }
+
+  .portfolio-grid.is-design .tool-chip,
+  .portfolio-grid.is-video .tool-chip {
+    min-height: 21px;
+    max-width: 100%;
+    padding: 0 6px;
+    font-size: 8.6px;
+    line-height: 1;
+  }
+
+  .portfolio-grid.is-video .play-badge span {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    padding-left: 3px;
+    background: rgba(5,11,20,0.54);
+  }
+}
+
+@media (max-width: 420px) {
+  .portfolio-grid.is-design,
+  .portfolio-grid.is-video {
+    gap: 10px;
+  }
+
+  .portfolio-grid.is-design .card-body,
+  .portfolio-grid.is-video .card-body {
+    padding: 9px 9px 10px;
+  }
+
+  .portfolio-grid.is-design .card-title,
+  .portfolio-grid.is-video .card-title {
+    font-size: 11.5px;
+  }
+
+  .portfolio-grid.is-design .card-description,
+  .portfolio-grid.is-video .card-description {
+    font-size: 10.4px;
+  }
+
+  .portfolio-grid.is-design .tool-chip,
+  .portfolio-grid.is-video .tool-chip {
+    font-size: 8px;
+  }
+
+  .portfolio-grid.is-video .play-badge span {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+}
