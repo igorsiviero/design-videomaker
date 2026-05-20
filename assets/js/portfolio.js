@@ -98,6 +98,40 @@
     return url;
   }
 
+
+  function getVideoPreviewUrl(url) {
+    const value = String(url || '').trim();
+    if (!value || value.includes('#t=')) return value;
+    if (value.includes('#')) return value;
+    return `${value}#t=0.1`;
+  }
+
+  function prepareVideoPreviews() {
+    $$('.media-frame video', els.grid).forEach((video) => {
+      video.muted = true;
+      video.playsInline = true;
+
+      const markReady = () => video.classList.add('video-preview-ready');
+      const seekToPreviewFrame = () => {
+        const duration = Number(video.duration || 0);
+        if (!Number.isFinite(duration) || duration <= 0) return;
+
+        const target = Math.min(0.25, Math.max(0.08, duration * 0.015));
+        if (Math.abs(video.currentTime - target) < 0.02) return;
+
+        try {
+          video.currentTime = target;
+        } catch (error) {
+          markReady();
+        }
+      };
+
+      video.addEventListener('loadedmetadata', seekToPreviewFrame, { once: true });
+      video.addEventListener('loadeddata', markReady, { once: true });
+      video.addEventListener('seeked', markReady, { once: true });
+    });
+  }
+
   function normalizeData(payload) {
     if (!payload || typeof payload !== 'object') return { design: [], video: [] };
 
@@ -230,6 +264,8 @@
     $$('.media-frame img, .media-frame video', els.grid).forEach((media) => {
       media.addEventListener('error', () => markMissing(media), { once: true });
     });
+
+    if (state.view === 'video') prepareVideoPreviews();
   }
 
   function getCardClass(item) {
@@ -243,6 +279,7 @@
     const title = escapeHtml(item.title || 'Projeto sem título');
     const description = escapeHtml(item.description || '');
     const url = escapeHtml(item.url);
+    const previewUrl = escapeHtml(getVideoPreviewUrl(item.url));
     const id = escapeHtml(item.id || item.filename || item.url);
     const format = escapeHtml(item.format || '');
     const cardClass = getCardClass(item);
@@ -250,7 +287,7 @@
 
     const media = state.view === 'design'
       ? `<img src="${url}" alt="${title}" loading="lazy">`
-      : `<video src="${url}" muted playsinline preload="metadata"></video><div class="play-badge"><span>▶</span></div>`;
+      : `<video src="${previewUrl}" muted playsinline preload="metadata"></video><div class="play-badge"><span>▶</span></div>`;
 
     return `
       <article class="portfolio-card ${cardClass}">
