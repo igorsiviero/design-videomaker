@@ -72,7 +72,13 @@
 
   function getInitialView() {
     const hash = String(location.hash || '').replace('#', '').toLowerCase();
-    return hash === 'video' ? 'video' : 'design';
+    if (hash === 'video' || hash === 'design') return hash;
+
+    const configured = String(document.body?.dataset?.defaultView || '').toLowerCase();
+    if (configured === 'video' || configured === 'design') return configured;
+
+    if (location.pathname.toLowerCase().includes('portfolio-video')) return 'video';
+    return 'design';
   }
 
   function escapeHtml(value = '') {
