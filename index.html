@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio | Igor Siviero Nogueira</title>
-  <meta name="description" content="Portfólio | Igor Siviero Nogueira">
+  <title>Igor Siviero Nogueira | Trajetória</title>
+  <meta name="description" content="Trajetória profissional de Igor Siviero Nogueira em marketing, front-end, design, vídeo, dados e tecnologia.">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <nav class="nav" aria-label="Navegação principal">
     <div class="nav__inner">
-      <a class="nav__logo" href="#design" aria-label="Horizon Interactive Studios">
+      <a class="nav__logo" href="index.html" aria-label="Horizon Interactive Studios">
         <img class="nav__logo-img" src="assets/img/horizon-logo.png" alt="Horizon Interactive Studios">
       </a>
 
       <ul class="nav__links" role="list">
-        <li><a href="#design" class="nav-tab active" data-view="design">Portfólio Design</a></li>
-        <li><a href="#video" class="nav-tab" data-view="video">Portfólio Vídeo</a></li>
-        <li><a href="experiencia.html">Trajetória</a></li>
+        <li><a href="index.html" class="active">Trajetória</a></li>
+        <li><a href="portfolio-design.html">Portfólio Design</a></li>
+        <li><a href="portfolio-video.html">Portfólio Vídeo</a></li>
       </ul>
 
       <a href="https://wa.me/5511944758109" class="nav__cta desktop" target="_blank" rel="noopener">Falar com a equipe</a>
@@ -29,83 +29,211 @@
   </nav>
 
   <div class="nav__mobile" id="mobileMenu" role="navigation" aria-label="Menu mobile">
-    <a href="#design" class="nav-tab active" data-view="design">Portfólio Design</a>
-    <a href="#video" class="nav-tab" data-view="video">Portfólio Vídeo</a>
-    <a href="experiencia.html">Trajetória</a>
+    <a href="index.html" class="active">Trajetória</a>
+    <a href="portfolio-design.html">Portfólio Design</a>
+    <a href="portfolio-video.html">Portfólio Vídeo</a>
     <a href="https://wa.me/5511944758109" class="nav__cta" target="_blank" rel="noopener">Falar com a equipe</a>
   </div>
 
-  <main class="page-shell">
-    <section class="portfolio-hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="page-kicker">Horizon Interactive Studios</div>
-          <h1 class="page-title">Portfólio Visual Completo.</h1>
+  <main class="page-shell journey-page">
+    <section class="journey-hero" aria-labelledby="journey-title">
+      <div class="container journey-hero__grid">
+        <div class="journey-hero__content">
+          <div class="page-kicker">Trajetória profissional</div>
+          <h1 id="journey-title" class="journey-title">Tecnologia, marketing e criação visual trabalhando na mesma direção.</h1>
+          <p class="journey-lead">
+            Sou Igor Siviero Nogueira. Minha trajetória conecta desenvolvimento front-end, marketing digital, design, edição de vídeo, dados e automação para transformar presença digital em estrutura, performance e percepção de valor.
+          </p>
 
-          <div class="hero-portfolio-switch" aria-label="Selecionar seção do portfólio">
-            <a href="#design" class="hero-switch-btn nav-tab active" data-view="design">
+          <div class="site-switch journey-switch" aria-label="Navegação principal da página">
+            <a href="index.html" class="site-switch__btn active">
+              <span>Conheça minha</span>
+              Trajetória
+            </a>
+            <a href="portfolio-design.html" class="site-switch__btn">
               <span>Portfólio</span>
               Design
             </a>
-            <a href="#video" class="hero-switch-btn nav-tab" data-view="video">
+            <a href="portfolio-video.html" class="site-switch__btn">
               <span>Portfólio</span>
               Vídeo
             </a>
-            <a href="experiencia.html" class="hero-switch-btn hero-switch-link">
-              <span>Sobre mim</span>
-              Trajetória
-            </a>
           </div>
 
+          <div class="journey-hero__meta" aria-label="Resumo profissional">
+            <span>Front-End</span>
+            <span>Marketing & Growth</span>
+            <span>Design & Vídeo</span>
+            <span>Analytics & CRM</span>
+          </div>
         </div>
 
-        <aside class="hero-panel" aria-label="Resumo do portfólio">
-          <div class="panel-metric">
-            <span id="totalDesign">0</span>
-            <small>Artes</small>
+        <aside class="journey-portrait-card" aria-label="Foto de Igor Siviero Nogueira">
+          <div class="journey-portrait__glow" aria-hidden="true"></div>
+          <div class="journey-portrait__frame">
+            <img src="assets/img/igor-siviero.png" alt="Igor Siviero Nogueira" class="journey-portrait">
           </div>
-          <div class="panel-metric">
-            <span id="totalVideo">0</span>
-            <small>Vídeos</small>
+          <div class="journey-signature-card">
+            <strong>Igor Siviero Nogueira</strong>
+            <span>Analista de Marketing · Desenvolvedor Front-End · Designer Gráfico</span>
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="portfolio-section">
+    <section class="journey-stats" aria-label="Resumo da experiência">
+      <div class="container journey-stats__grid">
+        <article>
+          <strong>6+</strong>
+          <span>anos em tecnologia aplicada ao marketing digital</span>
+        </article>
+        <article>
+          <strong>4+</strong>
+          <span>anos em desenvolvimento front-end</span>
+        </article>
+        <article>
+          <strong>8+</strong>
+          <span>anos em criação audiovisual, design e edição</span>
+        </article>
+        <article>
+          <strong>360°</strong>
+          <span>visão entre estratégia, criação, dados e implementação</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="journey-section journey-about">
+      <div class="container journey-about__grid">
+        <div class="journey-section__intro">
+          <div class="page-kicker">Perfil profissional</div>
+          <h2>Um perfil híbrido entre execução técnica, análise e construção de marca.</h2>
+        </div>
+        <div class="journey-about__text">
+          <p>
+            Minha atuação nasceu da prática: criar interfaces, produzir peças, editar vídeos, configurar mensuração, estruturar campanhas e entender o impacto de cada entrega no negócio. Com isso, desenvolvi uma leitura integrada entre estética, performance, experiência do usuário e resultado comercial.
+          </p>
+          <p>
+            O diferencial está em não tratar tecnologia, design e marketing como áreas isoladas. Cada página, campanha, criativo, dashboard ou automação precisa cumprir uma função clara dentro da jornada: atrair, engajar, converter, medir e melhorar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey-section">
       <div class="container">
-        <div class="section-top">
+        <div class="journey-section__header">
           <div>
-            <div class="page-kicker" id="viewKicker">Portfólio de Design</div>
-            <h2 class="section-title" id="viewTitle">Artes, banners e logos.</h2>
-            <p class="section-description" id="viewDescription">
-              Clique em qualquer miniatura para ampliar o projeto em tela cheia.
-            </p>
+            <div class="page-kicker">Áreas de atuação</div>
+            <h2>Competências conectadas para construir produtos digitais, campanhas e experiências.</h2>
           </div>
-          <div class="portfolio-count" id="portfolioCount">Carregando...</div>
         </div>
 
-        <div class="portfolio-toolbar">
-          <div class="filter-pills" id="filterPills" aria-label="Filtros de formato"></div>
+        <div class="journey-skills-grid">
+          <article class="journey-skill-card">
+            <span class="skill-index">01</span>
+            <h3>Desenvolvimento Front-End</h3>
+            <p>HTML, CSS, JavaScript, TypeScript, React, WordPress, PHP, performance, responsividade, acessibilidade, componentização e interfaces orientadas à conversão.</p>
+          </article>
+          <article class="journey-skill-card featured">
+            <span class="skill-index">02</span>
+            <h3>Marketing, Growth & Performance</h3>
+            <p>Google Ads, Meta Ads, social media, funil completo, CRO, forecast, planejamento de campanhas, CRM, mídia paga e otimização contínua.</p>
+          </article>
+          <article class="journey-skill-card">
+            <span class="skill-index">03</span>
+            <h3>Dados, BI & Mensuração</h3>
+            <p>Google Tag Manager, Google Analytics, Hotjar, Semrush, APIs, pixels, eventos, dashboards, ROI, ROAS, CAC, CPL, CPA e atribuição multicanal.</p>
+          </article>
+          <article class="journey-skill-card">
+            <span class="skill-index">04</span>
+            <h3>Design, Vídeo & Identidade</h3>
+            <p>Photoshop, Illustrator, After Effects, Premiere, CapCut, criativos, banners, landing pages, edição de vídeo, identidade visual e comunicação digital.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey-section journey-timeline-section">
+      <div class="container journey-timeline-layout">
+        <div class="journey-timeline-heading">
+          <div class="page-kicker">Linha do tempo</div>
+          <h2>Experiência profissional</h2>
+          <p>Uma construção progressiva entre tecnologia, marketing, criação, e-commerce, CRM, analytics e operação digital.</p>
         </div>
 
-        <div class="empty-state" id="emptyState" hidden>
-          <h3>Nenhum item encontrado</h3>
-          <p>Não há projetos disponíveis nesta seleção.</p>
-        </div>
+        <div class="journey-timeline">
+          <article class="journey-timeline-item current">
+            <div class="journey-date">Jan 2025 — Atual</div>
+            <div class="journey-timeline-card">
+              <h3>Prestação de Serviços — Marketing, Tecnologia e Criação Digital</h3>
+              <p>Desenvolvimento de sites, landing pages, interfaces, criativos, vídeos, campanhas e materiais de comunicação, conectando front-end, marketing, design, analytics, CRM e conversão.</p>
+              <div class="stack-list"><span>React</span><span>WordPress</span><span>Google Ads</span><span>Meta Ads</span><span>Analytics</span><span>Photoshop</span><span>Premiere</span></div>
+            </div>
+          </article>
 
-        <div class="portfolio-grid" id="portfolioGrid"></div>
+          <article class="journey-timeline-item">
+            <div class="journey-date">Jul 2025 — Dez 2025</div>
+            <div class="journey-timeline-card">
+              <h3>Nowhey Suplementos — Analista de Marketing / E-commerce</h3>
+              <p>Apoio em marketing, tráfego pago, e-commerce, CRM, criativos e campanhas, conectando Shopify, RD Station e Meta Ads à operação comercial.</p>
+              <div class="stack-list"><span>Shopify</span><span>RD Station</span><span>Meta Ads</span><span>Photoshop</span><span>Premiere</span></div>
+            </div>
+          </article>
+
+          <article class="journey-timeline-item">
+            <div class="journey-date">Jan 2025 — Jul 2025</div>
+            <div class="journey-timeline-card">
+              <h3>Consultório Preservare — Analista de Tecnologia e Administração</h3>
+              <p>Suporte a sistemas, processos administrativos, CRM, presença digital, identidade visual e otimização de rotinas internas.</p>
+              <div class="stack-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>CRM</span><span>Processos</span></div>
+            </div>
+          </article>
+
+          <article class="journey-timeline-item">
+            <div class="journey-date">Fev 2024 — Nov 2024</div>
+            <div class="journey-timeline-card">
+              <h3>SOG Digital — Desenvolvedor Front-End / Designer Digital</h3>
+              <p>Desenvolvimento de site, identidade visual, criativos, implementação de tags via GTM/GA e apoio técnico a campanhas de mídia paga.</p>
+              <div class="stack-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>GTM</span><span>GA</span></div>
+            </div>
+          </article>
+
+          <article class="journey-timeline-item">
+            <div class="journey-date">Ago 2023 — Jan 2024</div>
+            <div class="journey-timeline-card">
+              <h3>REF+ — Desenvolvedor Front-End</h3>
+              <p>Monitoramento, manutenção e otimização de sites parceiros, apoiando estabilidade, performance e experiência do usuário.</p>
+              <div class="stack-list"><span>WordPress</span><span>Adobe AEM</span><span>Bubble</span><span>PHP</span><span>UX</span></div>
+            </div>
+          </article>
+
+          <article class="journey-timeline-item">
+            <div class="journey-date">Mai 2019 — Dez 2022</div>
+            <div class="journey-timeline-card">
+              <h3>Blue Media Services — Analista de Marketing e Tecnologia</h3>
+              <p>Integração de tags via GTM, GA e APIs, análise de dados e desenvolvimento/otimização de banners digitais.</p>
+              <div class="stack-list"><span>GTM</span><span>GA</span><span>APIs</span><span>HTML</span><span>CSS</span><span>Photoshop</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey-section journey-credentials">
+      <div class="container journey-credentials__grid">
+        <article class="journey-credential-card">
+          <div class="page-kicker">Formação</div>
+          <h2>Engenharia de Software</h2>
+          <p>Universidade Anhembi Morumbi · início em fev/2020 · trancada temporariamente.</p>
+        </article>
+        <article class="journey-credential-card">
+          <div class="page-kicker">Cursos & certificações</div>
+          <h2>Web, criação e mensuração</h2>
+          <p>Desenvolvimento Web pela Udemy, SAGA 5.0 com Photoshop, After Effects, Illustrator, Unreal Engine, C++ e Blender, além de certificados em Google Tag Manager e Google Analytics.</p>
+        </article>
       </div>
     </section>
   </main>
-
-  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Visualização ampliada">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">×</button>
-    <div class="lightbox-content">
-      <div class="lightbox-media" id="lightboxMedia"></div>
-      <div class="lightbox-caption" id="lightboxCaption"></div>
-    </div>
-  </div>
 
   <footer>
     <div class="footer-inner">
@@ -115,7 +243,25 @@
     </div>
   </footer>
 
-  <script src="assets/js/portfolio-data.js"></script>
-  <script src="assets/js/portfolio.js"></script>
+  <script>
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburger = document.getElementById('hamburger');
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!mobileMenu.contains(event.target) && !hamburger.contains(event.target)) {
+        closeMobileMenu();
+      }
+    });
+  </script>
 </body>
 </html>
